@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang=" ">
+<head>
+    <meta charset="utf-8" />
+    <title>הזמנות</title>
+    <link rel="icon" href="images/icon.png" type="image/svg">
+    <meta name="description" content="הזמנות" />
+    <meta name="keywords" content=" " />
+    <meta name="author" content="שיר דרור, נועה בר שדה סיון פיירמן" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle - order.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="jScripts/JavaScript.js"></script>
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <div class="nav" aria-label="תפריט ניווט ראשי">
+
+            <img src="images/סופי.png" class="image-logo" alt="לוגו האתר" />
+            <a href="#">מה הם צמחי אוויר</a>
+            <a href="#">טיפול נכון</a>
+            <a href="#">סוגים</a>
+            <a href="#">משתלות</a>
+        </div>
+    </header>
+    <div id="container">
+        <main>
+            <div class="image-container-right">
+                <img src="images/contact.jpg" alt="Description of image">
+            </div>
+            <div class="bred">
+                <br />
+                <br />
+                <br />
+                <a href="#">לעמוד הבית></a>
+            </div>
+            <div class="contact-container">
+                <div class="text-content">
+
+                    <h2>הזמנות</h2>
+
+                    <form>
+                        <label for="fullName">*שם מלא:</label><br>
+                        <input type="text" id="fullName" name="fullName" oninput="enableButton();"><br><br>
+                        <label for="adress">*כתובת למשלוח:</label><br>
+                        <input type="text" id="adress" name="adress" oninput="enableButton()"><br><br>
+                        *שיטת משלוח:
+                        <label>
+                            <input type="radio" name="shipping" value="home" onclick="enableButton();checkSelectionShipping()">
+                            משלוח עד הבית
+                            <input type="radio" name="shipping" value="pickup" onclick="enableButton();checkSelectionShipping()">
+                            איסוף עצמי
+                        </label> <br /><br />
+                        <label>
+                            *בחר את הסוג/ים שתרצה: <br />
+                            <input type="checkbox" class="radio_button" name="option" value="KAMMI" onclick="selectPlent();enableButton()">
+                            KAMMI
+                            <br />
+                            <input type="checkbox" class="radio_button" name="option" value="STREPTOCRAPA" onclick="selectPlent();enableButton()">
+                            STREPTOCRAPA
+                            <br />
+                            <input type="checkbox" class="radio_button" name="option" value="DURATI" onclick="selectPlent();enableButton()">
+                            DURATI
+                            <br />
+                            <input type="checkbox" class="radio_button" name="option" value="SHOETIME" onclick="selectPlent();enableButton()">
+                            SHOETIME
+                            <br />
+                            <input type="checkbox" class="radio_button" name="option" value="PHOLIANA" onclick="selectPlent();enableButton()">
+                            PHOLIANA
+                            <br />
+                        </label>
+                        <br /><br />
+                        <label>
+                            הוספה למשלוח: <br />
+                            <input type="checkbox" class="addToShipping" value="מסמרי תליה" onclick="selectAddToShipping()">
+                            מסמרי תליה
+                            <br />
+                            <input type="checkbox" class="addToShipping" value="חוט מתכת" onclick="selectAddToShipping()">
+                            חוט מתכת
+                            <br />
+                            <input type="checkbox" class="addToShipping" value="אבני נוי" onclick="selectAddToShipping()">
+                            אבני נוי
+                            <br />
+                            <input type="checkbox" class="addToShipping" value="בקבוק ספריי להשקייה" onclick="selectAddToShipping()">
+                            בקבוק ספריי להשקייה
+                            <br />
+                            <input type="checkbox" class="addToShipping" value="אדנית נתלת" onclick="selectAddToShipping()">
+                            אדנית נתלת
+                            <br />
+                        </label>
+                        <br /><br />
+                        <label for="message">הערות למשלוח</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                        <br /><br />
+                        <button type="button" id="order" onclick="btn()" disabled>הזמן</button>
+                    </form>
+                </div>
+            </div>
+            
+            <table class="styled-table">
+                <tr>
+                    <td colspan="5">ההזמנה שלך</td>
+
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="images/home.png" alt="home"  id="home"></td>
+                    <td colspan="1"></td>
+                    <td colspan="2"><img src="images/pickup.png" alt="pickup"id="pickup"></td>
+
+                </tr>
+                <tr>
+                    <td><img src="images/KAMMI.jpg" alt="KAMMI"  id="KAMMI"></td>
+                    <td><img src="images/STREPTOCRAPA.jpg" alt="STREPTOCRAPA" id="STREPTOCRAPA"></td>
+                    <td><img src="images/DURATI.jpg" alt="DURATI"  id="DURATI"></td>
+                    <td><img src="images/SHOETIME.jpg" alt="SHOETIME" id="SHOETIME"></td>
+                    <td><img src="images/PHOLIANA.jpg" alt="PHOLIANA" id="PHOLIANA"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/מסמרים.jpg" alt="מסמרי תליה" id="מסמרי תליה"></td>
+                    <td><img src="images/וו תליה.jpg" alt="חוט מתכת" id="חוט מתכת"></td>
+                    <td><img src="images/אבנים.jpg" alt="אבני נוי"  id="אבני נוי"></td>
+                    <td><img src="images/שפריצר.jpg" alt="בקבוק ספריי להשקייה"  id="בקבוק ספריי להשקייה"></td>
+                    <td><img src="images/כלי לאחסון.jpg" alt="אדנית נתלת"  id="אדנית נתלת"></td>
+                </tr>
+
+
+            </table>
+
+        </main>
+
+
+        <div class="footer" aria-label="תפריט ניווט תחתון">
+            <p>
+                <a href="#">צור קשר</a>
+                <a href="#">מפת האתר</a>
+                <a href="#">אודות</a>
+            </p>
+        </div>
+    </div>
+    <div id="customAlert" class="custom-alert">
+        <div class="custom-alert-content">
+            <span class="closebtn" onclick="closeAlert()"></span>
+            <p id="alertMessage"></p>
+            <br />
+            <button onclick="closeAlert()">אישור</button>
+        </div>
+    </div>
+</body>
+</html>

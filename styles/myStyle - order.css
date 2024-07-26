@@ -1,0 +1,479 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+
+}
+
+header {
+    width: 100%;
+    background-color: white; 
+    text-align: center;
+    padding: 20px 0;
+    position:fixed;
+    z-index:3;
+}
+
+
+
+.nav {
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow for styling */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+    .nav a {
+        color: black;
+        margin: 0 15px;
+        text-decoration: none;
+        font-family: 'Rubik', sans-serif;
+        font-size: 26px;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+
+    }
+
+        .nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: black;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        /*Index*/
+.image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    flex:1;
+    height:100vh;
+    overflow:hidden;
+}
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+       
+    }
+   /*טיפול נכון*/
+
+
+
+
+.pagetitel h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 36px;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    color: white;
+
+}
+.image-container-small {
+    position: relative;
+    text-align: center;
+    color: white;
+    flex: 1;
+    height: 300px;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+  
+}
+    .image-container-small img {
+        width: 100%;
+        height:100%
+    }
+
+.image-container-right {
+    float: right; /* מגדיר שהתמונה תהיה בצד ימין */
+    margin-left: 10px;
+    position: relative;
+    color: white;
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+}
+
+    .image-container-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+
+
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    text-align: center;
+    background-position: center;
+    padding: 1em;
+}
+     
+
+
+    .hero h1 {
+        font-size: 2.5em;
+        margin: 0.5em 0;
+        font-family: 'Rubik', sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+        margin: 0.5em 0;
+        font-family: 'Rubik', sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+
+.highlight {
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: #ccff33;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    padding: 1em 2em;
+    margin: 0.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+    .button:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+main {
+    flex: 1;
+}
+
+.footer {
+    background-color: #B2C696;
+    text-align: right;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding:20px;
+
+}
+
+    .footer p {
+        margin: 0;
+
+    }
+
+    .footer a {
+        color: black;
+        margin-left: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+.bred {
+    padding: 30px;
+    margin-left: 15px;
+    padding: 30px;
+    top:60px;
+
+}
+.content {
+    background-color: white;
+    margin: 80px auto 20px;
+    padding: 20px;
+    max-width: 1200px; /* רוחב מרבי */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: auto; /* רוחב אוטומטי בהתאם לתוכן */
+    height: auto; /* גובה אוטומטי בהתאם לתוכן */
+}
+
+    .content h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .content h3 {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+
+    .content p {
+        line-height: 1.6;
+        font-size: 26px;
+        margin-bottom: 50px;
+    }
+
+    .content ul {
+        list-style-type: disc; /* מוודא שיש בולטים */
+        padding-left: 30px;
+        font-size:30px;
+    }
+
+    .content li {
+        margin: 10px 0;
+    }
+
+
+
+.gveret-levin {
+    font-family: 'Gveret Levin AlefAlefAlef',  cursive;
+    font-size: 32px;
+}
+
+.column {
+    flex: 1;
+    margin: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight:700;
+}
+
+.column a {
+    color:black;
+    text-decoration:none;
+}
+
+h4 {
+    font-family: 'Gveret Levin AlefAlefAlef',  cursive;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    list-style-type: disc;
+}
+
+li {
+    margin-bottom:10px;
+}
+h6 {
+    font-family: 'Rubik', sans-serif;
+    text-align:center;
+    font-size:24px;
+    font-weight:300;
+
+}
+
+.contentMap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+
+.hit{
+    text-align:center;
+}
+.ourPhoto{
+    text-align:center;
+}
+.ourPhoto img{
+    width:200px;
+    height:200px;
+    
+}
+.ourPhoto figure{
+    display:inline-block;
+    margin:0 10px;
+}
+    .ourPhoto figcaption {
+        text-align:center;
+        margin-top:5px;
+        font-size: 24px;
+    }
+
+.prodacts ol{
+    font-size:24px;
+    color:black;
+}
+.prodacts ul {
+    font-size: 24px;
+    color: black;
+    margin-right:20px;
+}
+
+
+.image-logo {
+    height: 60px; /* גובה התמונה */
+    position:absolute;
+    top:10px;
+    right:10px;
+
+}
+
+/* ORDER.css */
+/*עיצוב של הודעת סיום*/
+.custom-alert {
+    display: none; /* התחל מוסתר */
+    position: fixed;
+    z-index: 1; /* מקם לפני כל תוכן אחר */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* אפשר גלילה אם יש צורך */
+    background-color: rgb(0,0,0); /* שחור עם שקיפות */
+    background-color: rgba(0,0,0,0.4); /* שחור עם שקיפות */
+}
+
+.custom-alert-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% מלמעלה ומרכז באמצע */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    text-align: center;
+}
+
+.closebtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .closebtn:hover,
+    .closebtn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+
+.custom-alert-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    .custom-alert-content button:hover {
+        background-color: #45a049;
+    }
+
+
+
+    /*טבלת תמונות*/
+.styled-table {
+    width: 100%;
+    max-width: 600px; /* מקסימום רוחב של 600 פיקסלים */
+    border-collapse: collapse;
+    margin: 20px auto; /* מרכז את הטבלה במרכז הדף */
+    position: absolute;
+    top: 200px;
+    left: 200px;
+   /* transition: opacity 0.5s;*/
+}
+
+    .styled-table img {
+        width: 100px; /* רוחב קבוע של 100 פיקסלים */
+        height: 100px; /* גובה קבוע של 100 פיקסלים */
+        opacity: 0.5; /* הגדרת שקיפות התחלתית */
+    }
+
+    .styled-table th, .styled-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .styled-table th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+
+/*כפתור סיום*/
+button#order {
+    position: absolute;
+    top: 600px; /* מקם את הכפתור מתחת לטבלה */
+    left: 200px; /* באותו מיקום אופקי כמו הטבלה */
+    display: block;
+    margin: 20px auto;
+}
+
+#order {
+    background-color: green;
+    opacity: 0.5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: not-allowed;
+}
+
+    /* עיצוב כפתור לחיץ */
+    #order.active {
+        background-color: green;
+        opacity: 1;
+        cursor: pointer;
+    }
+
